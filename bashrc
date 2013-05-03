@@ -13,6 +13,7 @@ export PS1='$( [[ ${?#0} = "" ]] && echo ":) " || echo ":( " )'
 export TERM='xterm-color'
 alias ls='ls -G'
 alias ll='ls -lG'
+alias j='cd ~/code'
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 
