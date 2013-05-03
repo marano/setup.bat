@@ -27,11 +27,15 @@ set laststatus=2
 set showmatch
 set incsearch
 set hlsearch
-set cursorline
 set number
 set textwidth=79
 
+" cursor line makes vim slow when using colors :(
+" set cursorline
+
 filetype plugin indent on " required for Vundle
+
+set t_Co=256
 
 " Solarized Theme
 syntax enable
@@ -45,7 +49,7 @@ au BufRead,BufNewFile *.md set filetype=markdown
 let mapleader=","
 
 " Fix slow O inserts
-:set timeout timeoutlen=1000 ttimeoutlen=100
+set timeout timeoutlen=1000 ttimeoutlen=100
 
 " Prevent Vim from clobbering the scrollback buffer. See
 " http://www.shallowsky.com/linux/noaltscreen.html
