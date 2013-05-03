@@ -1,0 +1,20 @@
+[user]
+	name = marano
+	email = thiagomarano@gmail.com
+[core]
+	editor = /usr/bin/vim
+	excludesfile = ~/.gitignore
+[color]
+	ui = auto
+[github]
+	user = marano
+[merge]
+  tool = vimdiff
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  di = diff
+  dc = diff --cached
+  amend = commit --amend
+  aa = add --all
