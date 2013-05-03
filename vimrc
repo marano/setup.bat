@@ -35,7 +35,8 @@ set textwidth=79
 
 filetype plugin indent on " required for Vundle
 
-set t_Co=256
+" This was making stuff ugly
+" set t_Co=256
 
 " Solarized Theme
 syntax enable
