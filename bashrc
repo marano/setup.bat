@@ -9,6 +9,8 @@ export PATH=$PATH:~/heroku-client/bin
 # Awesome terminal happy face
 export PS1='$( [[ ${?#0} = "" ]] && echo ":) " || echo ":( " )'
 
+shopt -s autocd
+
 # Unbreak broken, non-colored terminal
 export TERM='xterm-color'
 alias ls='ls -G'
@@ -23,4 +25,3 @@ export HISTCONTROL=erasedups
 export HISTSIZE=10000
 # Append to the history file when exiting instead of overwriting it
 shopt -s histappend
-
