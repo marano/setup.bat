@@ -6,3 +6,4 @@ ln -Ff gitconfig ~/.gitconfig
 ln -Ff gitignore ~/.gitignore
 ln -Ff bash_profile ~/.bash_profile
 ln -Ff bashrc ~/.bashrc
+ln -Ff rspec ~/.rspec
