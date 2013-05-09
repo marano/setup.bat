@@ -22,13 +22,11 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set autoindent
 set laststatus=2
 set showmatch
 set incsearch
 set hlsearch
 set number
-set textwidth=79
 
 " cursor line makes vim slow when using colors :(
 " set cursorline
@@ -68,6 +66,8 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+
+map <leader>ag :Ag 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN FILES IN DIRECTORY OF CURRENT FILE
