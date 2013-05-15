@@ -1,9 +1,9 @@
 #!/bin/sh
 
-ln -Ff vimrc ~/.vimrc
-ln -Ff tmux.conf ~/.tmux.conf
-ln -Ff gitconfig ~/.gitconfig
-ln -Ff gitignore ~/.gitignore
-ln -Ff bash_profile ~/.bash_profile
-ln -Ff bashrc ~/.bashrc
-ln -Ff rspec ~/.rspec
+ln -Ff dotfiles/vimrc ~/.vimrc
+ln -Ff dotfiles/tmux.conf ~/.tmux.conf
+ln -Ff dotfiles/gitconfig ~/.gitconfig
+ln -Ff dotfiles/gitignore ~/.gitignore
+ln -Ff dotfiles/bash_profile ~/.bash_profile
+ln -Ff dotfiles/bashrc ~/.bashrc
+ln -Ff dotfiles/rspec ~/.rspec
