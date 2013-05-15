@@ -8,4 +8,4 @@ else
   git clone git@bitbucket.org:marano/setup.exe.git
 fi
 
-./keys.sh
+./setup_ssh.sh
