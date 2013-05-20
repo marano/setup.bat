@@ -6,6 +6,7 @@ if [ -d ~/code/setup.exe ]; then
 else
   cd ~/code
   git clone git@bitbucket.org:marano/setup.exe.git
+  cd ~/code/setup.exe
 fi
 
 ./setup_ssh.sh
