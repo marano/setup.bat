@@ -7,4 +7,3 @@ ln -Ff dotfiles/gitignore ~/.gitignore
 ln -Ff dotfiles/bash_profile ~/.bash_profile
 ln -Ff dotfiles/bashrc ~/.bashrc
 ln -Ff dotfiles/rspec ~/.rspec
-ln -Ff dotfiles/known_hosts ~/.ssh/known_hosts
