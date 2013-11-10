@@ -29,3 +29,13 @@ export HISTCONTROL=erasedups
 export HISTSIZE=10000
 # Append to the history file when exiting instead of overwriting it
 shopt -s histappend
+
+
+# Youtuble download stuff
+
+alias s='rsync --exclude=*.part --partial --append --progress -rvz dl:sync ~'
+alias dyt=download_you_tube
+
+download_you_tube() {
+  ssh dl "cd sync && youtube-dl $1"
+}
