@@ -15,6 +15,7 @@ Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'slim-template/vim-slim'
 Bundle 'groenewege/vim-less'
+Bundle 'jelera/vim-javascript-syntax'
 
 set hidden
 
