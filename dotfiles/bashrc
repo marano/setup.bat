@@ -1,22 +1,14 @@
-
-PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 alias ctags="`brew --prefix`/bin/ctags"
 alias sg="shotgun -p 3000"
 
-export PATH=$PATH:~/heroku-client/bin
-
 # Awesome terminal happy face
-export PS1='$( [[ ${?#0} = "" ]] && echo ":) " || echo ":( " )'
-
-shopt -s autocd
+export PS1='$( [[ ${?#0} = "" ]] && echo "\n:) " || echo "\n:( " )'
 
 # Unbreak broken, non-colored terminal
-export TERM='xterm-color'
+# export TERM='xterm-color'
 alias sourceb='source ~/.bashrc'
 alias vibashrc='vi ~/.bashrc'
-alias ls='ls -G'
-alias ll='ls -lG'
+alias ls='ls -lahG'
 alias j='cd ~/code'
 alias df='cd ~/.wine/drive_c/Program\ Files/df_34_11_win && wine Dwarf\ Fortress.exe'
 alias dt='cd ~/.wine/drive_c/Program\ Files/DwarfTherapist-0.6.12 && wine DwarfTherapist.exe'
@@ -30,12 +22,3 @@ export HISTSIZE=10000
 # Append to the history file when exiting instead of overwriting it
 shopt -s histappend
 
-
-# Youtuble download stuff
-
-alias s='rsync --exclude=*.part --partial --append --progress -rvz dl:sync ~'
-alias dyt=download_you_tube
-
-download_you_tube() {
-  ssh dl "cd sync && youtube-dl $1"
-}

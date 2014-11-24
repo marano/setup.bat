@@ -1,25 +1,26 @@
 set nocompatible
 filetype off " required for Vundle
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'rking/ag.vim'
-Bundle 'nelstrom/vim-visual-star-search'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'slim-template/vim-slim'
-Bundle 'groenewege/vim-less'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'airblade/vim-gitgutter'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'rking/ag.vim'
+Plugin 'nelstrom/vim-visual-star-search'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'wincent/command-t'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'slim-template/vim-slim'
+Plugin 'groenewege/vim-less'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'airblade/vim-gitgutter'
+
+call vundle#end()
 
 set hidden
-
 set expandtab
 set tabstop=2
 set shiftwidth=2
@@ -29,6 +30,10 @@ set showmatch
 set incsearch
 set hlsearch
 set number
+
+" mouse setup
+set mouse=a
+map <xCSI>[62~ <MouseDown>
 
 " cursor line makes vim slow when using colors :(
 " set cursorline
@@ -41,6 +46,7 @@ filetype plugin indent on " required for Vundle
 " Solarized Theme
 syntax enable
 set background=dark
+let g:solarized_termcolors=256
 colorscheme solarized
 
 au BufRead,BufNewFile *.md set filetype=markdown
@@ -48,6 +54,14 @@ au BufRead,BufNewFile *.md set filetype=markdown
 " Copied from https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
 
 let mapleader=","
+
+" Little hack to fix the split/scroll problem 
+tabnew
+bwipeout
+
+" Open new split panes to right and bottom, which feels more natural than Vim’s default:
+set splitbelow
+set splitright
 
 " Fix slow O inserts
 set timeout timeoutlen=1000 ttimeoutlen=100
