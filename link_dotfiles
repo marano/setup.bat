@@ -1,0 +1,8 @@
+#!/usr/bin/ruby
+
+Dir['dotfiles/*'].each do |file|
+  source_file = File.absolute_path(file)
+  link_path = "~/.#{File.basename(file)}"
+  puts "Linking #{link_path} to #{source_file}"
+  `ln -sFfv #{source_file} #{link_path}`
+end
