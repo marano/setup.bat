@@ -7,3 +7,4 @@ ln -sFf dotfiles/gitignore ~/.gitignore
 ln -sFf dotfiles/bash_profile ~/.bash_profile
 ln -sFf dotfiles/bashrc ~/.bashrc
 ln -sFf dotfiles/rspec ~/.rspec
+ln -sFf dotfiles/gemrc ~/.gemrc
