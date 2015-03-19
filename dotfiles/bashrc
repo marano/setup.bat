@@ -2,7 +2,7 @@ alias ctags="`brew --prefix`/bin/ctags"
 alias sg="shotgun -p 3000"
 
 # Awesome terminal happy face
-export PS1='$( [[ ${?#0} = "" ]] && echo "\n:) " || echo "\n:( " )'
+export PS1='$( [[ ${?#0} = "" ]] && echo ":) " || echo ":( " )'
 
 # Unbreak broken, non-colored terminal
 # export TERM='xterm-color'
