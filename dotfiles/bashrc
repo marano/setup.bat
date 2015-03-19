@@ -6,7 +6,7 @@ export PS1='$( [[ ${?#0} = "" ]] && echo ":) " || echo ":( " )'
 
 # Unbreak broken, non-colored terminal
 # export TERM='xterm-color'
-alias sourceb='source ~/.bashrc'
+alias sourcebashrc='source ~/.bashrc'
 alias vibashrc='vi ~/.bashrc'
 alias ls='ls -lahG'
 alias j='cd ~/code'
