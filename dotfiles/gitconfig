@@ -4,6 +4,7 @@
 [core]
 	editor = /usr/bin/vim
 	excludesfile = ~/.gitignore
+	autocrlf = input
 [color]
 	ui = auto
 [github]
@@ -18,3 +19,5 @@
   dc = diff --cached
   amend = commit --amend
   aa = add --all
+[push]
+	default = simple
