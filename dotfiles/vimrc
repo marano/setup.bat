@@ -24,6 +24,7 @@ Plugin 'elzr/vim-json'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'rodjek/vim-puppet'
 
 call vundle#end()
 
