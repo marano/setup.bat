@@ -1,24 +1,67 @@
 alias ctags="`brew --prefix`/bin/ctags"
 alias sg="shotgun -p 3000"
+alias be="bundle exec"
 
 # Awesome terminal happy face
 export PS1='$( [[ ${?#0} = "" ]] && echo ":) " || echo ":( " )'
 
 # Unbreak broken, non-colored terminal
 # export TERM='xterm-color'
-alias sourcebashrc='source ~/.bashrc'
-alias vibashrc='vi ~/.bashrc'
-alias ls='ls -lahG'
-alias j='cd ~/code'
-alias df='cd ~/.wine/drive_c/Program\ Files/df_34_11_win && wine Dwarf\ Fortress.exe'
-alias dt='cd ~/.wine/drive_c/Program\ Files/DwarfTherapist-0.6.12 && wine DwarfTherapist.exe'
+
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
-export GREP_OPTIONS="--color --recursive --ignore-case --binary-files=without-match --line-number"
+export GREP_OPTIONS="--color --recursive --binary-files=without-match --line-number --exclude-dir={.git,log,tmp,tags,public,coverage,node_modules,.tmp,dist,bower_components,vendor,.idea}"
+
+alias grep="grep --color --recursive --binary-files=without-match --line-number --exclude-dir={.git,log,tmp,tags,public,coverage,node_modules,.tmp,dist,bower_components,vendor,.idea}"
 
 # Erase duplicates in history
 export HISTCONTROL=erasedups
 # Store 10k history entries
-export HISTSIZE=10000
+export HISTSIZE=500000
 # Append to the history file when exiting instead of overwriting it
 shopt -s histappend
-export RBENV_VERSION=2.2.0
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+alias sourcebashrc='source ~/.bashrc'
+alias vibashrc='vi ~/.bashrc'
+
+alias g='git'
+alias st='git status'
+
+alias ls='ls -lahG'
+alias j='cd ~/code'
+
+alias df='cd ~/.wine/drive_c/Program\ Files/df_34_11_win && wine Dwarf\ Fortress.exe'
+alias dt='cd ~/.wine/drive_c/Program\ Files/DwarfTherapist-0.6.12 && wine DwarfTherapist.exe'
+
+alias flushdns='aliased to sudo discoveryutil mdnsflushcache;sudo discoveryutil udnsflushcaches;say flushed'
+alias copypubkey='cat ~/.ssh/id_rsa.pub | pbcopy'
+
+alias star_up='cd ~/code/do && ruby start_starbound_server.rb'
+alias star_down='cd ~/code/do && ruby stop_starbound_server.rb'
+
+alias ctags_source='ctags -R --exclude=public --exclude=.git --exclude=tmp --exclude=.bundle --exclude=coverage --exclude=doc --exclude=.idea --exclude=log .'
+
+alias ss='cd "/Users/marano/Library/Application Support/Colossal Order/Cities_Skylines/Saves"'
+
+alias k='pkill -if'
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export PATH="./bin:$PATH"
+
+export PATH="/usr/local/Cellar/heroku-toolbelt/3.30.3/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/Users/marano/android-sdk-macosx/platform-tools:$PATH"
+export PATH="/Users/marano/android-sdk-macosx/tools:$PATH"
+
+export AWS_DEFAULT_PROFILE=***REMOVED***
+export AWS_ACCESS_KEY=***REMOVED***
+export AWS_SECRET_KEY=***REMOVED***
+
+export EDITOR=vim
+
+export PGDATA='/usr/local/var/postgres'
+export PGHOST=localhost
+
+. `brew --prefix`/etc/profile.d/z.sh

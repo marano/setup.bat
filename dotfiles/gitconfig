@@ -1,14 +1,18 @@
 [user]
-	name = marano
-	email = thiagomarano@gmail.com
+  name = marano
+  email = thiagomarano@gmail.com
 [core]
-	editor = /usr/bin/vim
-	excludesfile = ~/.gitignore
-	autocrlf = input
+  editor = /usr/bin/vim
+  excludesfile = ~/.gitignore
+  autocrlf = input
+  pager = less -S
 [color]
-	ui = auto
+  ui = auto
+  diff = auto
+  status = auto
+  branch = auto
 [github]
-	user = marano
+  user = marano
 [merge]
   tool = vimdiff
 [alias]
@@ -17,7 +21,17 @@
   co = checkout
   di = diff
   dc = diff --cached
-  amend = commit --amend
+  ca = commit --amend
+  cane = commit --amend --no-edit
   aa = add --all
+  l=log --pretty=format:'%Cblue %d %Creset %cd %Cred %h %Cgreen %aN %Creset %s' --color --graph --all --date=relative
+[apply]
+  whitespace = warn
 [push]
-	default = simple
+  default = simple
+[log]
+  decorate = true
+[diff]
+  color-words = true
+[rerere]
+  enabled = true
