@@ -65,3 +65,5 @@ export PGDATA='/usr/local/var/postgres'
 export PGHOST=localhost
 
 . `brew --prefix`/etc/profile.d/z.sh
+
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
