@@ -46,6 +46,8 @@ alias ss='cd "/Users/marano/Library/Application Support/Colossal Order/Cities_Sk
 
 alias k='pkill -if'
 
+alias flushmemcached='echo "flush_all" | nc localhost 11211'
+
 export PATH="$HOME/.rbenv/bin:$PATH"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="./bin:$PATH"
