@@ -16,6 +16,7 @@
 [merge]
   tool = vimdiff
 [alias]
+  b = branch
   st = status
   ci = commit
   co = checkout
@@ -28,10 +29,14 @@
 [apply]
   whitespace = warn
 [push]
-  default = simple
+  default = current
 [log]
   decorate = true
 [diff]
   color-words = true
 [rerere]
   enabled = true
+[rebase]
+  autoStash = true
+[pull]
+  rebase = true
